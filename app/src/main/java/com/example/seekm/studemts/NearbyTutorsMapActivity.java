@@ -272,7 +272,7 @@ public class NearbyTutorsMapActivity extends FragmentActivity implements OnMapRe
                     public void onClick(final DialogInterface dialog, final int id) {
                         dialog.cancel();
                         dialog.dismiss();
-                        Intent intent = new Intent(NearbyTutorsMapActivity.this,TutorProfile.class)
+                        Intent intent = new Intent(NearbyTutorsMapActivity.this,TutorsProfile.class)
                                 .putExtra("uid", UID);
                         startActivity(intent);
                         //getDeviceLocation();
