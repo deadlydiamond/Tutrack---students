@@ -153,14 +153,18 @@ public class EditProfile extends AppCompatActivity {
             profileImg.setImageDrawable(null);
             profileImg.setBackgroundResource(0);
             profileImg.setImageURI(uriProfileImage);
+            CShowProgress cShowProgress = CShowProgress.getInstance();
+            cShowProgress.showProgress(EditProfile.this);
             uploadImageToFirebase();
+            cShowProgress.hideProgress();
         }
     }
 
     @SuppressLint("RestrictedApi")
     private void uploadImageToFirebase() {
-        CShowProgress cShowProgress = CShowProgress.getInstance();
-        cShowProgress.showProgress(EditProfile.this);
+
+        FAB.setVisibility(View.INVISIBLE);
+
         profileImageRef= FirebaseStorage.getInstance().getReference().child("ProfilePicture/"+System.currentTimeMillis()+".jpg");
         if(uriProfileImage!=null){
             profileImageRef.putFile(uriProfileImage).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -183,7 +187,7 @@ public class EditProfile extends AppCompatActivity {
                     Toast.makeText(EditProfile.this, "Failed", Toast.LENGTH_SHORT).show();
                 }
             });
-            cShowProgress.hideProgress();
+
         }
     }
 }
