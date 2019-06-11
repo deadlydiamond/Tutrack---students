@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.nispok:snackbar:2.11.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/snackbar-2.11.0.aar/c46f6774a7432aacdfcaa496fc9b8417/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/snackbar-2.11.0.aar/c46f6774a7432aacdfcaa496fc9b8417/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/snackbar-2.11.0.aar/c46f6774a7432aacdfcaa496fc9b8417/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nispok/snackbar/2.11.0/7ad0d3ceff28fe71e2c574ad135e122fa8d5c24c/snackbar-2.11.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
