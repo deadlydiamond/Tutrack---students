@@ -90,6 +90,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     DatabaseReference databaseReference;
     private static final String TAG = "haha";
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    CShowProgress cShowProgress = CShowProgress.getInstance();
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
@@ -98,8 +99,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        CShowProgress cShowProgress = CShowProgress.getInstance();
-        cShowProgress.showProgress(MapsActivity.this);
         // Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "onMapReady: map is ready");
         mMap = googleMap;
@@ -161,7 +160,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-
+        cShowProgress.showProgress(MapsActivity.this);
         if (isConnected()) {
             //Snackbar.make(findViewById(R.id.nearbyTutors),"Internet Connected" , Snackbar.LENGTH_INDEFINITE).show();
             //Toast.makeText(getApplicationContext(), "Internet Connected", Toast.LENGTH_SHORT).show();
@@ -324,7 +323,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View view) {
                 if (longitude!=0.0d && latitude!=0.0d) {
                     Log.d(TAG, "global lat and long: " + latitude);
-
+                    CShowProgress cShowProgress = CShowProgress.getInstance();
+                    cShowProgress.showProgress(MapsActivity.this);
                     // Intent intent = new Intent(MapsActivity.this, Result.class);
                     String longitudeStr, latitudeStr;
                     latitudeStr = String.valueOf(latitude);
@@ -339,7 +339,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     String First_Name = Profile_preferences.getString("First_Name", null);
                     String Last_Name = Profile_preferences.getString("Last_Name", null);
                     String Email = Profile_preferences.getString("Email", null);
-                    String password = Profile_preferences.getString("Password", null);
                     String DateOfBirth = Profile_preferences.getString("Date_Of_Birth", null);
                     String Gender = Profile_preferences.getString("Gender", null);
                     String profile_Image_Url = Profile_preferences.getString("Profile_Image_Url", null);
@@ -359,7 +358,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Student.put("FirstName",First_Name );
                     Student.put("LastName", Last_Name);
                     Student.put("EmailAddress", Email);
-                    Student.put("Password", password);
                     Student.put("DateOfBirth",DateOfBirth );
                     Student.put("Gender", Gender);
                     Student.put("ProfileImage_Url",profile_Image_Url );
@@ -396,8 +394,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-
+                cShowProgress.hideProgress();
                 }
+
             }
         });
     }

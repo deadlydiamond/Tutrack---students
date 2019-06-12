@@ -264,7 +264,7 @@ public class Drawer extends AppCompatActivity
 
         } else if (id == R.id.nav_logout) {
 
-
+            finishAffinity();
             FirebaseAuth.getInstance().signOut();
 
 //            ((ActivityManager)getSystemService(ACTIVITY_SERVICE)).clearApplicationUserData();

@@ -16,7 +16,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -42,12 +41,10 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText First_name;
     EditText Last_name;
-    ImageButton add;
-
+    ImageButton plus;
+    ImageView add;
     EditText Email;
 
-    EditText signup_password;
-    EditText Confirm_password;
 
     EditText DateOfBirth;
 
@@ -70,8 +67,6 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
 
     String dateOfBirth = null;
 
-    String user_password = "";
-    String confirm_password = "";
 
     String Gender="";
 
@@ -91,21 +86,17 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //p1=findViewById(R.id.next_progres_bar);
-        First_name = findViewById(R.id.name);
+        First_name = findViewById(R.id.fName);
 
 
 
 
-        Last_name = findViewById(R.id.emaill);
+        Last_name = findViewById(R.id.lName);
 
-        Email = findViewById(R.id.qualificationn);
+        Email = findViewById(R.id.email);
 
 
-        signup_password = findViewById(R.id.genderr);
-
-        Confirm_password = findViewById(R.id.boardd);
-
-        DateOfBirth = findViewById(R.id.dobb);
+        DateOfBirth = findViewById(R.id.dob);
         DateOfBirth.setLongClickable(false);
 
         radioGroup_gender = findViewById(R.id.radio_group_gender);
@@ -113,7 +104,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
         radioButton_male = findViewById(R.id.radio_btn_male);
         radioButton_female = findViewById(R.id.radio_btn_female);
 
-        signup_float = findViewById(R.id.floating_action_btn_signup_form);
+        signup_float = findViewById(R.id.floatingActionButton3);
 
         signup_float.setOnClickListener(this);
 
@@ -175,7 +166,7 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
 
-            case R.id.floating_action_btn_signup_form:
+            case R.id.floatingActionButton3:
 
                 TakeUserData();
 
@@ -203,8 +194,8 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
         if(requestCode==CHOOSE_IMAGE && resultCode == RESULT_OK && data!=null && data.getData()!=null){
 
             Image_upload_checker=1;
-            add = (ImageButton)findViewById(R.id.addButton);
-            add.setVisibility(View.GONE);
+            plus = (ImageButton)findViewById(R.id.addButton);
+            plus.setVisibility(View.GONE);
             uriProfileImage  = data.getData();
             signup_profile_image.setImageDrawable(null);
             signup_profile_image.setBackgroundResource(0);
@@ -218,8 +209,6 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
         first_name = First_name.getText().toString();
         last_name = Last_name.getText().toString();
         email = Email.getText().toString();
-        user_password = signup_password.getText().toString();
-        confirm_password = Confirm_password.getText().toString();
         dateOfBirth = DateOfBirth.getText().toString();
 
         int selectId =radioGroup_gender.getCheckedRadioButtonId();
@@ -234,11 +223,9 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
 
         Next_Activity+= validateEmail(email,Email);
 
-        Next_Activity+= validatePassword(user_password,signup_password,confirm_password,Confirm_password);
-
         Next_Activity+= validateDateOfbirth(dateOfBirth,DateOfBirth);
 
-        if(Next_Activity==5){
+        if(Next_Activity==4){
 
 
             p1 = CShowProgress.getInstance();
@@ -306,19 +293,18 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
 //            public void run() {
 
 
-                SharedPreferences.Editor editor = Profile_preferences.edit();
-                editor.putString("First_Name",first_name);
-                editor.putString("Last_Name",last_name);
-                editor.putString("Email",email);
-                editor.putString("Password",user_password);
-                editor.putString("Date_Of_Birth",dateOfBirth);
-                editor.putString("Gender",Gender);
-                editor.putString("Profile_Image_Url",ProfileUrl);
-                editor.apply();
-                p1.hideProgress();
+        SharedPreferences.Editor editor = Profile_preferences.edit();
+        editor.putString("First_Name",first_name);
+        editor.putString("Last_Name",last_name);
+        editor.putString("Email",email);
+        editor.putString("Date_Of_Birth",dateOfBirth);
+        editor.putString("Gender",Gender);
+        editor.putString("Profile_Image_Url",ProfileUrl);
+        editor.apply();
+        p1.hideProgress();
 
 
-                GoToProfileBuilder();
+        GoToProfileBuilder();
 //            }
 //        }, 10000);
     }
@@ -344,48 +330,6 @@ public class NextActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private int validatePassword(String user_password, EditText signup_password, String confirm_password, EditText confirm_password1) {
-
-
-        if(!user_password.matches("^(?:(?=.*[a-z])(?:(?=.*[A-Z])(?=.*[\\d\\W])|(?=.*\\W)(?=.*\\d))|(?=.*\\W)(?=.*[A-Z])(?=.*\\d)).{8,}$")){
-
-            signup_password.setError("Password must contain A Capital letter , A number ");
-            signup_password.requestFocus();
-
-            return 0;
-
-        }
-
-        if(user_password.length()==0){
-
-            signup_password.setError("Password is required");
-            signup_password.requestFocus();
-
-            return 0;
-        }
-
-
-        if(confirm_password.length()==0){
-
-            confirm_password1.setError("Enter password here too");
-            confirm_password1.requestFocus();
-
-            return 0;
-        }
-
-        if(!confirm_password.equals(user_password)){
-
-            signup_password.setError("Both Passwords must match");
-            signup_password.requestFocus();
-            confirm_password1.setError("Both Passwords must match");
-            confirm_password1.requestFocus();
-
-            return 0;
-        }
-
-        return 1;
-
-    }
 
     private int validateEmail(String email, EditText email1) {
 

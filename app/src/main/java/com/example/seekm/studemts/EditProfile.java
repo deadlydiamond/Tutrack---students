@@ -2,6 +2,7 @@ package com.example.seekm.studemts;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -65,6 +66,8 @@ public class EditProfile extends AppCompatActivity {
         final CShowProgress cShowProgress = CShowProgress.getInstance();
         cShowProgress.showProgress(EditProfile.this);
 
+        disableEditText(gender);
+        disableEditText(email);
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Students")
                 .whereEqualTo("User_uid", uid)
@@ -134,7 +137,13 @@ public class EditProfile extends AppCompatActivity {
 
     }
 
-
+    private void disableEditText(EditText editText) {
+        editText.setFocusable(false);
+        editText.setEnabled(false);
+        editText.setCursorVisible(false);
+        editText.setKeyListener(null);
+        editText.setBackgroundColor(Color.TRANSPARENT);
+    }
 
     private void showImageChooser(){
         Intent intent = new Intent();

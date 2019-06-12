@@ -55,12 +55,7 @@ public class EnterNumber extends AppCompatActivity {
         mNumber = (EditText)findViewById(R.id.number);
 
         mForgot = (TextView) findViewById(R.id.forgotBtn);
-        mForgot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startNewActivity(EnterNumber.this,ForgotPassword.class);
-            }
-        });
+        mForgot.setVisibility(View.GONE);
 
         mNoAccount = (TextView)findViewById(R.id.noAccountBtn);
         mNoAccount.setOnClickListener(new View.OnClickListener() {

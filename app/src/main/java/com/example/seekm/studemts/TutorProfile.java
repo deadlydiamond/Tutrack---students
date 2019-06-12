@@ -1,6 +1,5 @@
 package com.example.seekm.studemts;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -20,8 +19,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 public class TutorProfile extends AppCompatActivity {
 
     TextView fullName, email, gender, qualification, dob, board;
@@ -38,11 +35,11 @@ public class TutorProfile extends AppCompatActivity {
         setContentView(R.layout.activity_tutor_profile);
 
         dp = (ImageView) findViewById(R.id.profilePicture);
-        fullName = (TextView) findViewById(R.id.name);
-        email = (TextView) findViewById(R.id.emaill);
+        fullName = (TextView) findViewById(R.id.fName);
+        email = (TextView) findViewById(R.id.lName);
         gender= (TextView) findViewById(R.id.genderr);
-        qualification = (TextView) findViewById(R.id.qualificationn);
-        dob = (TextView) findViewById(R.id.dobb);
+        qualification = (TextView) findViewById(R.id.email);
+        dob = (TextView) findViewById(R.id.dob);
         board = (TextView) findViewById(R.id.boardd);
 
 

@@ -86,7 +86,7 @@ public class Trouble_Verification extends AppCompatActivity implements View.OnCl
 
                 finishAffinity();
 
-                startActivity(new Intent(Trouble_Verification.this,UserForgotPassword.class));
+                startActivity(new Intent(Trouble_Verification.this,SocialVerification.class));
                 break;
 
         }

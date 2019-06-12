@@ -8,7 +8,7 @@
                 android:startColor="@color/fui_transparent"
                 android:centerY="1.8"
                 android:endColor="@color/fui_transparent"/>
-            <corners android:radius="20dp"/>
+            <corners android:radius="18sp"/>
         </shape>
     </item>
 
@@ -19,7 +19,7 @@
             <gradient
                 android:startColor="@color/colorAccent"
                 android:endColor="@color/colorSocial"/>
-            <corners android:radius="20dp"/>
+            <corners android:radius="18sp"/>
         </shape>
         </clip>
     </item>

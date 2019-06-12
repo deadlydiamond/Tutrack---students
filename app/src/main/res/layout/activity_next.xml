@@ -95,9 +95,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/qualificationn"
+        app:layout_constraintBottom_toBottomOf="@+id/email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/qualificationn"
+        app:layout_constraintTop_toTopOf="@+id/email"
         app:srcCompat="@drawable/ic_email" />
 
     <ImageView
@@ -106,9 +106,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintBottom_toBottomOf="@+id/fName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/fName"
         app:srcCompat="@drawable/ic_person" />
 
     <ImageButton
@@ -127,8 +127,9 @@
         app:layout_constraintTop_toTopOf="@+id/profilePicture" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/fName"
         android:layout_width="0dp"
+        android:maxLines="1"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -137,8 +138,8 @@
         android:ems="10"
         android:hint="First Name"
         android:imeOptions="actionNext"
-        android:inputType="textCapSentences"
-        android:textSize="16sp"
+        android:inputType="textCapSentences|textAutoComplete"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -146,18 +147,6 @@
         app:layout_constraintTop_toBottomOf="@+id/profilePicture"
         app:layout_constraintVertical_bias="0.167" />
 
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/boardd"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/genderr"
-        app:srcCompat="@drawable/ic_lock" />
 
     <ImageView
         android:id="@+id/imageView21"
@@ -171,104 +160,56 @@
         app:srcCompat="@drawable/ic_gender" />
 
     <EditText
-        android:id="@+id/emaill"
+        android:id="@+id/lName"
         android:layout_width="303dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:maxLines="1"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="Last Name"
         android:imeOptions="actionNext"
-        android:inputType="textCapSentences"
-        android:textSize="16sp"
+        android:inputType="textCapSentences|textAutoComplete"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/fName" />
 
     <EditText
-        android:id="@+id/qualificationn"
+        android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:maxLines="1"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:ems="10"
+        android:imeOptions="actionDone"
         android:hint="Email"
-        android:imeOptions="actionNext"
-        android:inputType="textEmailAddress"
-        android:textSize="16sp"
+        android:inputType="textEmailAddress|textCapSentences|textAutoComplete"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/emaill" />
+        app:layout_constraintTop_toBottomOf="@+id/lName" />
 
     <ImageView
         android:id="@+id/imageView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/radio_group_gender"
+        app:layout_constraintBottom_toBottomOf="@+id/dob"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/dobb"
+        app:layout_constraintTop_toTopOf="@+id/dob"
         app:srcCompat="@drawable/ic_date" />
 
-    <EditText
-        android:id="@+id/genderr"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:ems="10"
-        android:hint="Password"
-        android:imeOptions="actionNext"
-        android:inputType="textPassword"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView18"
-        app:layout_constraintTop_toBottomOf="@+id/qualificationn" />
 
     <EditText
-        android:id="@+id/boardd"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:ems="10"
-        android:hint="Re-enter Password"
-        android:imeOptions="actionNext"
-        android:inputType="textPassword"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView19"
-        app:layout_constraintTop_toBottomOf="@+id/genderr" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/dobb"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/boardd"
-        app:srcCompat="@drawable/ic_lock" />
-
-    <EditText
-        android:id="@+id/dobb"
+        android:id="@+id/dob"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -279,10 +220,13 @@
         android:hint="Date of birth"
         android:imeOptions="actionDone"
         android:inputType="date"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView20"
-        app:layout_constraintTop_toBottomOf="@+id/boardd" />
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="0.0" />
 
     <RadioGroup
         android:id="@+id/radio_group_gender"
@@ -296,7 +240,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dobb">
+        app:layout_constraintTop_toBottomOf="@+id/dob">
 
         <RadioButton
             android:id="@+id/radio_btn_male"
@@ -326,7 +270,7 @@
     </RadioGroup>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floating_action_btn_signup_form"
+        android:id="@+id/floatingActionButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -348,9 +292,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/emaill"
+        app:layout_constraintBottom_toBottomOf="@+id/lName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/emaill"
+        app:layout_constraintTop_toTopOf="@+id/lName"
         app:srcCompat="@drawable/ic_person" />
 
 
@@ -370,7 +314,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/User_email_logged_In" />
 
-    <!--16sp"-->
+    <!--18sp"-->
     <!--app:constraintEnd_toEndOf="parent"-->
     <!--app:l-->
     <!--straintHorizontal_bias="0.0"-->

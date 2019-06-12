@@ -504,16 +504,16 @@
     <dimen name="abc_button_inset_vertical_material">6dp</dimen>
     <dimen name="abc_button_padding_horizontal_material">8dp</dimen>
     <dimen name="abc_button_padding_vertical_material">@dimen/abc_control_padding_material</dimen>
-    <dimen name="abc_cascading_menus_min_smallest_width">720dp</dimen>
-    <dimen name="abc_config_prefDialogWidth">320dp</dimen>
+    <dimen name="abc_cascading_menus_min_smallest_width">718sp</dimen>
+    <dimen name="abc_config_prefDialogWidth">318sp</dimen>
     <dimen name="abc_control_corner_material">2dp</dimen>
     <dimen name="abc_control_inset_material">4dp</dimen>
     <dimen name="abc_control_padding_material">4dp</dimen>
     <dimen name="abc_dialog_corner_radius_material">2dp</dimen>
     <item name="abc_dialog_fixed_height_major" type="dimen">80%</item>
     <item name="abc_dialog_fixed_height_minor" type="dimen">100%</item>
-    <item name="abc_dialog_fixed_width_major" type="dimen">320dp</item>
-    <item name="abc_dialog_fixed_width_minor" type="dimen">320dp</item>
+    <item name="abc_dialog_fixed_width_major" type="dimen">318sp</item>
+    <item name="abc_dialog_fixed_width_minor" type="dimen">318sp</item>
     <dimen name="abc_dialog_list_padding_bottom_no_buttons">8dp</dimen>
     <dimen name="abc_dialog_list_padding_top_no_title">8dp</dimen>
     <item name="abc_dialog_min_width_major" type="dimen">65%</item>
@@ -537,7 +537,7 @@
     <dimen name="abc_search_view_preferred_width">320dip</dimen>
     <dimen name="abc_seekbar_track_background_height_material">2dp</dimen>
     <dimen name="abc_seekbar_track_progress_height_material">2dp</dimen>
-    <dimen name="abc_select_dialog_padding_start_material">20dp</dimen>
+    <dimen name="abc_select_dialog_padding_start_material">18sp</dimen>
     <dimen name="abc_switch_padding">3dp</dimen>
     <dimen name="abc_text_size_body_1_material">14sp</dimen>
     <dimen name="abc_text_size_body_2_material">14sp</dimen>
@@ -551,16 +551,16 @@
     <dimen name="abc_text_size_large_material">22sp</dimen>
     <dimen name="abc_text_size_medium_material">18sp</dimen>
     <dimen name="abc_text_size_menu_header_material">14sp</dimen>
-    <dimen name="abc_text_size_menu_material">16sp</dimen>
+    <dimen name="abc_text_size_menu_material">18sp</dimen>
     <dimen name="abc_text_size_small_material">14sp</dimen>
-    <dimen name="abc_text_size_subhead_material">16sp</dimen>
+    <dimen name="abc_text_size_subhead_material">18sp</dimen>
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
-    <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">18sp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="browser_actions_context_menu_max_width">500dp</dimen>
-    <dimen name="browser_actions_context_menu_min_padding">20dp</dimen>
+    <dimen name="browser_actions_context_menu_min_padding">18sp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -585,8 +585,8 @@
     <dimen name="compat_button_padding_horizontal_material">8dp</dimen>
     <dimen name="compat_button_padding_vertical_material">4dp</dimen>
     <dimen name="compat_control_corner_material">2dp</dimen>
-    <dimen name="compat_notification_large_icon_max_height">320dp</dimen>
-    <dimen name="compat_notification_large_icon_max_width">320dp</dimen>
+    <dimen name="compat_notification_large_icon_max_height">318sp</dimen>
+    <dimen name="compat_notification_large_icon_max_width">318sp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_item_min_width">96dp</dimen>
@@ -659,9 +659,9 @@
     <item format="float" name="hint_pressed_alpha_material_light" type="dimen">0.54</item>
     <dimen name="icon_bottom_margin">24dp</dimen>
     <dimen name="icon_top_margin">24dp</dimen>
-    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">18sp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
-    <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">118sp</dimen>
     <dimen name="mtrl_bottomappbar_fabOffsetEndMode">60dp</dimen>
     <dimen name="mtrl_bottomappbar_fab_cradle_margin">5dp</dimen>
     <dimen name="mtrl_bottomappbar_fab_cradle_rounded_corner_radius">8dp</dimen>
@@ -732,7 +732,7 @@
     <dimen name="place_autocomplete_powered_by_google_start">16dp</dimen>
     <dimen name="place_autocomplete_prediction_height">72dp</dimen>
     <dimen name="place_autocomplete_prediction_horizontal_margin">16dp</dimen>
-    <dimen name="place_autocomplete_prediction_primary_text">16sp</dimen>
+    <dimen name="place_autocomplete_prediction_primary_text">18sp</dimen>
     <dimen name="place_autocomplete_prediction_secondary_text">14sp</dimen>
     <dimen name="place_autocomplete_progress_horizontal_margin">16dp</dimen>
     <dimen name="place_autocomplete_progress_size">24dp</dimen>
@@ -2690,11 +2690,11 @@
         <item name="android:textStyle">bold</item>
     </style>
     <style name="FirebaseUI.Text.T08" ns2:ignore="UnusedResources">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:lineSpacingExtra">8sp</item>
     </style>
     <style name="FirebaseUI.Text.T09" ns2:ignore="UnusedResources">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:lineSpacingExtra">4sp</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -2711,7 +2711,7 @@
         <item name="android:textSize">10sp</item>
     </style>
     <style name="FirebaseUI.TextInputEditText">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -3144,7 +3144,7 @@
     <item name="android:fontFamily">sans-serif</item>
     <item name="android:textStyle">normal</item>
     <item name="android:textAllCaps">false</item>
-    <item name="android:textSize">16sp</item>
+    <item name="android:textSize">18sp</item>
     <item name="android:letterSpacing">0.03125</item>
   </style>
     <style name="TextAppearance.MaterialComponents.Body2" parent="TextAppearance.AppCompat.Body1">
@@ -3239,7 +3239,7 @@
     <item name="android:fontFamily">sans-serif</item>
     <item name="android:textStyle">normal</item>
     <item name="android:textAllCaps">false</item>
-    <item name="android:textSize">16sp</item>
+    <item name="android:textSize">18sp</item>
     <item name="android:letterSpacing">0.009375</item>
   </style>
     <style name="TextAppearance.MaterialComponents.Subtitle2" parent="TextAppearance.AppCompat.Subhead">
@@ -3740,7 +3740,7 @@
     <item name="tabRippleColor">@color/mtrl_tabs_colored_ripple_color</item>
   </style>
     <style name="Widget.MaterialComponents.TextInputEditText.FilledBox" parent="Base.Widget.MaterialComponents.TextInputEditText">
-    <item name="android:paddingTop">20dp</item>
+    <item name="android:paddingTop">18sp</item>
     <item name="android:paddingBottom">16dp</item>
   </style>
     <style name="Widget.MaterialComponents.TextInputEditText.FilledBox.Dense">
@@ -3858,7 +3858,7 @@
         <item name="android:drawablePadding">12dp</item>
         <item name="android:singleLine">false</item>
         <item name="android:textColor">@color/com_facebook_device_auth_text</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:typeface">sans</item>
     </style>
     <style name="com_facebook_button" parent="@android:style/Widget.Button">

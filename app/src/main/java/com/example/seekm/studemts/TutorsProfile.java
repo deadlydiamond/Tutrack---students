@@ -49,11 +49,11 @@ public class TutorsProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutors_profile);
 
-        fullName = (TextView) findViewById(R.id.name);
-        email = (TextView) findViewById(R.id.emaill);
+        fullName = (TextView) findViewById(R.id.fName);
+        email = (TextView) findViewById(R.id.lName);
         gender= (TextView) findViewById(R.id.genderr);
-        qualification = (TextView) findViewById(R.id.qualificationn);
-        dob = (TextView) findViewById(R.id.dobb);
+        qualification = (TextView) findViewById(R.id.email);
+        dob = (TextView) findViewById(R.id.dob);
         board = (TextView) findViewById(R.id.boardd);
 
         cancel = (Button)findViewById(R.id.btn_cancel);

@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.treebo:internetavailabilitychecker:1.0.4@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/internetavailabilitychecker-1.0.4.aar/0ecd5bb55184183b02a2dfeb5ca24e28/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/internetavailabilitychecker-1.0.4.aar/0ecd5bb55184183b02a2dfeb5ca24e28/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/internetavailabilitychecker-1.0.4.aar/2fe228d8ff30b6434919bd73915a9b3f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/internetavailabilitychecker-1.0.4.aar/2fe228d8ff30b6434919bd73915a9b3f/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
